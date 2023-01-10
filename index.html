@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+ <div id = "header">
+      <div class="container">
+            <nav>
+              <img src="images/logo.png" class="logo">
+            </nav>
+           <div class ="header-text">
+            <p>Graphic Designer</p>
+            <h1>Hi, I'm <span>Marina </span>Simonini<br>from Boynton Beach, Florida.</h1>
+           </div>
+        </div>
+ </div>
+ <!-------------about------------->
+ <div id="about"> 
+  <div class="container">
+    <div class="row">
+       <div class="about-col-1">
+       <img src = "images/user.png">
+      </div>
+       <div class="about-col-2">
+        <h1 class="sub-title">About me</h1>
+        <p> Hi my name is Marina Simonini, I'm a graphic designer graduating from Florida Atlantic University in spring 2023 with a Bachelor in fine arts. 
+          I have a passion for packaging, branding, photography, and UI/UX. 
+          I consider myself a creative, open minded, and proactive person. I enjoy teamwork and am always willing to face new challenges.
+        </p>
+        <div class = "tab-titles"> 
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class = "tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br> Designing Mobile & Web Apps (HTML, CSS, Javascript)</li>
+            <li><span>Branding</span><br> Rebranding print-work (Adobe Creative Cloud, Mockups)</li>
+            <li><span>Graphic Design</span><br> Designing new logos for UI experience (Indesign, Illustrator, Photoshop)</li>
+            <li><span>Packaging</span><br>Creating customer-targeted packaging (Printwork, Adobe XD)</li>
+          </ul>
+        </div>
+        <div class = "tab-contents" id="experience">
+          <ul>
+            <li><span>Production Artist - Ace Marine</span><br>Lead in the design and implementation of indesign components, increased traffic to site by 15%</li>
+            <li><span>UI/UX Designer - Accountable Care Org</span><br>Implemented and created figma wireframes to a robust mobile app</li>
+            <li><span>Multimedia Designer - Agliolio Restauraunt</span><br>Re-branded menus utilizing indesign, photoshop, and illustrator</li>
+          </ul>
+        </div>
+        <div class = "tab-contents" id="education">
+          <ul>
+            <li><span>Florida Atlantic University --->  August 2019 - May 2023 </span><br> Bachelor of Fine Arts in Graphic Design</li>
+          </ul>
+        </div>
+       </div>
+    </div>
+  </div>
+ </div>
+  <!-------------portfolio------------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-tite">My Work</h1> 
+    <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.png">
+          <div class ="layer">
+            <h3>Political Social Media App</h3>
+            <p>This app brings a smooth and seemless UI for users to allow 
+              their political voices to be heard.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-2.png">
+          <div class ="layer">
+            <h3>Coffee Subscription Box Branding & Print</h3>
+            <p>Designed a coffee subscription box branding and printwork for coffee lovers and enthusiasts.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-3.png">
+          <div class ="layer">
+            <h3>Branding Agliolio Restaraunt</h3>
+            <p>Re-branded menus and decor for restaraunt utilizing indesign, photoshop, and illustrator.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+ <!-------------contact------------->
+ <div id="contact">
+  <div class ="container">
+    <div class = "row">
+      <div class ="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>marinasimonini00@live.com</p>
+        <p>561-306-6245</p>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for (tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link"); 
+    document.getElementById(tabname).classList.add("active-tab");
+     
+  }
+
+ </script>
+  </body>
+</html> 
